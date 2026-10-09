@@ -1,11 +1,22 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useNav } from '@slidev/client'
+import { injectLocal } from '@vueuse/core'
 import configs from '#slidev/configs'
 
-const { currentLayout, currentPage, total } = useNav()
+const globalNav = useNav()
+
+// In PDF/PNG export every slide is rendered at once, and PrintSlideClick provides a
+// per-slide nav context. The shared useNav() follows the router instead, so it would
+// report the same slide (the cover) for all pages and hide the footer everywhere.
+const slideContext = injectLocal('$$slidev-context' as any, undefined) as { nav?: typeof globalNav } | undefined
+const nav = computed(() => slideContext?.nav ?? globalNav)
+const currentLayout = computed(() => nav.value.currentLayout)
+const currentPage = computed(() => nav.value.currentPage)
+const total = computed(() => nav.value.total)
 
 const hiddenLayouts = ['cover', 'cover-alt', 'end', 'full']
+const noCornerLogoLayouts = [...hiddenLayouts, 'intro']
 
 const showSlideNumbers = computed(() => configs.themeConfig?.slideNumbers === true)
 
@@ -25,8 +36,14 @@ const footerBranding = computed(() => {
       <span v-if="footerBranding === 'handle' && handle" class="footer-handle">{{ handle }}</span>
       <img v-else src="/snyk-logo-dark.png" alt="Snyk" class="footer-logo" />
     </div>
-    <div v-if="showSlideNumbers" class="footer-right">
-      {{ currentPage }} / {{ total }}
+    <div class="footer-right">
+      <span v-if="showSlideNumbers">{{ currentPage }} / {{ total }}</span>
+      <img
+        v-if="!noCornerLogoLayouts.includes(currentLayout)"
+        src="/snyk-logo-dark.png"
+        alt="Snyk"
+        class="footer-corner-logo"
+      />
     </div>
   </footer>
 </template>
@@ -49,7 +66,7 @@ const footerBranding = computed(() => {
 }
 
 .footer-left {
-  opacity: 0.35;
+  opacity: 0.7np;
 }
 
 .footer-logo {
@@ -64,7 +81,19 @@ const footerBranding = computed(() => {
 }
 
 .footer-right {
-  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   letter-spacing: 0.05em;
+}
+
+.footer-right span {
+  opacity: 0.5;
+}
+
+.footer-corner-logo {
+  height: 20px;
+  width: auto;
+  opacity: 0.5;
 }
 </style>

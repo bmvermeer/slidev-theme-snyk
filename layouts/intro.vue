@@ -10,6 +10,8 @@ defineProps<{
 const tc = computed(() => (configs as any).themeConfig ?? {})
 const github = computed(() => tc.value.github ?? '')
 const x = computed(() => tc.value.x ?? tc.value.twitter ?? '')
+const bluesky = computed(() => tc.value.bluesky ?? '')
+const linkedin = computed(() => tc.value.linkedin ?? '')
 const website = computed(() => tc.value.website ?? '')
 const hasSocials = computed(() => github.value || x.value || website.value)
 </script>
@@ -22,6 +24,8 @@ const hasSocials = computed(() => github.value || x.value || website.value)
     <div class="intro-content">
       <slot />
       <div v-if="hasSocials" class="intro-socials">
+        <span v-if="bluesky">Bluesky: {{ bluesky }}</span>
+        <span v-if="linkedin">LinkedIn: {{ linkedin }}</span>
         <span v-if="github">GitHub: {{ github }}</span>
         <span v-if="x">X: {{ x }}</span>
         <span v-if="website">{{ website }}</span>
