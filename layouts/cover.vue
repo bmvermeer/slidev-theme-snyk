@@ -5,6 +5,8 @@ import configs from '#slidev/configs'
 
 defineProps<{
   class?: string
+  /** Optional full-bleed background image (with a dark overlay for text legibility). */
+  bgImage?: string
 }>()
 
 const frontmatter = inject(
@@ -65,7 +67,11 @@ const titleScale = computed(() => {
 
 <template>
   <div class="slidev-layout cover" :class="$attrs.class">
-    <div class="cover-bg" />
+    <template v-if="bgImage">
+      <img :src="bgImage" alt="" class="cover-bg-image" />
+      <div class="cover-bg-overlay" />
+    </template>
+    <div v-else class="cover-bg" />
     <div class="cover-content">
       <header v-if="showCoverHeading" class="cover-heading">
         <h1 v-if="coverHeadline" class="cover-title" :style="{ fontSize: `${3.5 * titleScale}rem` }">
@@ -92,6 +98,21 @@ const titleScale = computed(() => {
   background: url('/bg-dots-gradient.png') no-repeat center center;
   background-size: cover;
   opacity: 0.5;
+  pointer-events: none;
+}
+
+.cover-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 55%, rgba(0, 0, 0, 0.55) 100%);
   pointer-events: none;
 }
 

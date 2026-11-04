@@ -596,3 +596,23 @@ html:not(.dark) .glass-card {
   background: rgba(255, 255, 255, 0.7);
   border-color: #E0DFE5;
 }
+
+/* ─── Explanation text (technique definitions) ─── */
+
+.slidev-layout p.explain {
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--snyk-text);
+  margin: 0.5rem 0 1.5rem;
+}
+
+.slidev-layout .hl {
+  background-image: linear-gradient(135deg, var(--snyk-action), var(--snyk-action-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
