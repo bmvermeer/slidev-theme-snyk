@@ -15,6 +15,7 @@ defaults:
   transition: snyk-fade
 conference: Devoxx Morocco 2026
 layout: cover
+bgImage: /promptinjectiontalk/bg/casablanca.jpg
 coverTitleScale: 95
 themeConfig:
   handle: "@brianvermeer.nl"
@@ -22,6 +23,8 @@ themeConfig:
   bluesky: "@brianvermeer.nl"
   linkedin: "linkedin.com/in/brianvermeer"
 ---
+
+[//]: # (<footnote href="https://commons.wikimedia.org/wiki/File:Casablanca_&#40;1&#41;.jpg">Photo: elchicogris, CC BY-SA 2.0</footnote>)
 
 ---
 layout: section
