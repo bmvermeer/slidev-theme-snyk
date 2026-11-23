@@ -3,7 +3,7 @@ theme: ./
 title: "Understanding Prompt Injection"
 coverTitle: |
   Understanding Prompt Injection
-subtitle: Techniques, Challanges and Advanced Escalation
+subtitle: Techniques, Challenges and Advanced Escalation
 author: Brian Vermeer
 transition: snyk-fade
 colorSchema: dark
@@ -154,31 +154,6 @@ layout: quote
 </v-clicks>
 
 </div>
-
----
-layout: default
----
-
-# Types of Prompt Injection
-
-<div class="mt-12 grid grid-cols-4 gap-4">
-<v-clicks>
-
-  <div class="glow-card px-4 py-6 text-center"><strong>Direct instruction override</strong></div>
-  <div class="glow-card px-4 py-6 text-center"><strong>Structured output attack</strong></div>
-  <div class="glow-card px-4 py-6 text-center"><strong>Role playing</strong></div>
-  <div class="glow-card px-4 py-6 text-center"><strong>Virtualization</strong></div>
-  <div class="glow-card px-4 py-6 text-center"><strong>Multi-turn manipulation</strong></div>
-  <div class="glow-card px-4 py-6 text-center"><strong>Payload splitting</strong></div>
-  <div class="glow-card px-4 py-6 text-center"><strong>Encoding &amp; obfuscation</strong></div>
-  <div class="glow-card px-4 py-6 text-center"><strong>Delimiter confusion</strong></div>
-
-</v-clicks>
-</div>
-
-<!--
-The eight techniques we are about to walk through, one by one. Then, after the escalation part, we come back to how to defend against all of them.
--->
 
 ---
 layout: section

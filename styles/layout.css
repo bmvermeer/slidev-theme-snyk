@@ -14,8 +14,8 @@
   --snyk-text: #FFFFFF;
   --snyk-text-secondary: #B0AEBD;
   --snyk-text-muted: #6E6C7A;
-  --snyk-border: #1E1E28;
-  --snyk-border-light: #2E2E3A;
+  --snyk-border: #50505F;
+  --snyk-border-light: #6A6A7A;
   --snyk-glow: rgba(255, 15, 243, 0.1);
 
   --slidev-theme-primary: var(--snyk-primary);
