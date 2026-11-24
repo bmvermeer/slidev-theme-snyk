@@ -24,7 +24,7 @@ withDefaults(defineProps<{
 }
 
 .stat-value {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -48,7 +48,7 @@ withDefaults(defineProps<{
 }
 
 .stat-label {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 1rem;
   color: var(--snyk-text);

@@ -33,7 +33,7 @@ defineProps<{
   top: -1.5rem;
   left: -0.5rem;
   font-size: 5rem;
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   color: var(--snyk-primary);
   opacity: 0.2;
   line-height: 1;
@@ -69,7 +69,7 @@ defineProps<{
 }
 
 .quote-author {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--snyk-text);

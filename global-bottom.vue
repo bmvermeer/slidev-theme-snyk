@@ -16,7 +16,7 @@ const currentPage = computed(() => nav.value.currentPage)
 const total = computed(() => nav.value.total)
 
 const hiddenLayouts = ['cover', 'cover-alt', 'end', 'full']
-const noCornerLogoLayouts = [...hiddenLayouts, 'intro']
+const noCornerLogoLayouts = [...hiddenLayouts]
 
 const showSlideNumbers = computed(() => configs.themeConfig?.slideNumbers === true)
 
@@ -24,6 +24,7 @@ const handle = computed(() => configs.themeConfig?.handle as string | undefined)
 
 const footerBranding = computed(() => {
   const explicit = configs.themeConfig?.footerBranding as string | undefined
+  if (explicit === 'none') return 'none'
   if (explicit === 'logo') return 'logo'
   if (explicit === 'handle') return handle.value ? 'handle' : 'logo'
   return handle.value ? 'handle' : 'logo'
@@ -34,14 +35,14 @@ const footerBranding = computed(() => {
   <footer v-if="!hiddenLayouts.includes(currentLayout)" class="snyk-footer">
     <div class="footer-left">
       <span v-if="footerBranding === 'handle' && handle" class="footer-handle">{{ handle }}</span>
-      <img v-else src="/snyk-logo-dark.png" alt="Snyk" class="footer-logo" />
+      <img v-else-if="footerBranding !== 'none'" src="/aiss-logo.svg" alt="AI Security Summit" class="footer-logo" />
     </div>
     <div class="footer-right">
       <span v-if="showSlideNumbers">{{ currentPage }} / {{ total }}</span>
       <img
         v-if="!noCornerLogoLayouts.includes(currentLayout)"
-        src="/snyk-logo-dark.png"
-        alt="Snyk"
+        src="/aiss-logo.svg"
+        alt="AI Security Summit"
         class="footer-corner-logo"
       />
     </div>
@@ -60,7 +61,7 @@ const footerBranding = computed(() => {
   padding: 0.6rem 1.5rem;
   color: var(--snyk-text-muted);
   font-size: 0.7rem;
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   pointer-events: none;
   z-index: 10;
 }

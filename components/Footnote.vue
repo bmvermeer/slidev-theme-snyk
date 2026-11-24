@@ -36,7 +36,7 @@ withDefaults(defineProps<{
   align-items: flex-start;
   gap: 0.7rem;
   color: var(--snyk-text-muted);
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.72rem;
   line-height: 1.35;
   pointer-events: auto;
@@ -89,7 +89,7 @@ withDefaults(defineProps<{
 
 .footnote-label {
   color: var(--snyk-text-secondary);
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.1em;

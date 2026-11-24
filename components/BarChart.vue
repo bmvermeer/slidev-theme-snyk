@@ -71,7 +71,7 @@ withDefaults(defineProps<{
 }
 
 .bar-value {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--snyk-text);

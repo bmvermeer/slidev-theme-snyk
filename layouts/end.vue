@@ -33,7 +33,7 @@ const hasSocials = computed(() => github.value || x.value || website.value)
       </div>
     </div>
     <div class="end-logo">
-      <img src="/snyk-logo-dark.png" alt="Snyk" class="end-logo-img" />
+      <img src="/aiss-logo.svg" alt="AI Security Summit" class="end-logo-img" />
     </div>
   </div>
 </template>
@@ -42,7 +42,7 @@ const hasSocials = computed(() => github.value || x.value || website.value)
 .end-bg {
   position: absolute;
   inset: 0;
-  background: url('/bg-dots-gradient.png') no-repeat center center;
+  background: none;
   background-size: cover;
   opacity: 0.4;
   pointer-events: none;

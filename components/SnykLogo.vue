@@ -12,28 +12,28 @@ withDefaults(defineProps<{
   <span class="snyk-logo-wrap">
     <img
       v-if="mode === 'dark'"
-      src="/snyk-logo-dark.png"
-      alt="Snyk"
+      src="/aiss-logo.svg"
+      alt="AI Security Summit"
       class="snyk-logo-img"
       :style="{ height }"
     />
     <img
       v-else-if="mode === 'light'"
-      src="/snyk-logo-light.png"
-      alt="Snyk"
+      src="/aiss-logo.svg"
+      alt="AI Security Summit"
       class="snyk-logo-img"
       :style="{ height }"
     />
     <template v-else>
       <img
-        src="/snyk-logo-dark.png"
-        alt="Snyk"
+        src="/aiss-logo.svg"
+        alt="AI Security Summit"
         class="snyk-logo-img snyk-logo-dark-only"
         :style="{ height }"
       />
       <img
-        src="/snyk-logo-light.png"
-        alt="Snyk"
+        src="/aiss-logo.svg"
+        alt="AI Security Summit"
         class="snyk-logo-img snyk-logo-light-only"
         :style="{ height }"
       />

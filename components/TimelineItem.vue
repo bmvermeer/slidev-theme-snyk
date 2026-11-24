@@ -63,7 +63,7 @@ withDefaults(defineProps<{
 }
 
 .timeline-step {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 0.8rem;
   color: var(--snyk-text-muted);
@@ -78,7 +78,7 @@ withDefaults(defineProps<{
 }
 
 .timeline-title {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 1rem;
   color: var(--snyk-text);

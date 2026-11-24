@@ -31,11 +31,12 @@
   "slidev": {
     "colorSchema": "both",
     "defaults": {
-      "favicon": "/favicon.png",
+      "favicon": "/favicon.svg",
       "fonts": {
-        "sans": "Nunito Sans",
-        "serif": "Sora",
-        "mono": "JetBrains Mono"
+        "sans": "Space Grotesk",
+        "serif": "Space Grotesk",
+        "mono": "JetBrains Mono",
+        "webfonts": ["Space Grotesk", "JetBrains Mono", "Iceland"]
       },
       "transition": "snyk-fade"
     }

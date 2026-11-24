@@ -86,7 +86,7 @@ const titleScale = computed(() => {
       </div>
     </div>
     <div class="cover-footer">
-      <img src="/snyk-logo-dark.png" alt="Snyk" class="cover-logo" />
+      <img src="/aiss-logo.svg" alt="AI Security Summit" class="cover-logo" />
     </div>
   </div>
 </template>
@@ -95,7 +95,7 @@ const titleScale = computed(() => {
 .cover-bg {
   position: absolute;
   inset: 0;
-  background: url('/bg-dots-gradient.png') no-repeat center center;
+  background: none;
   background-size: cover;
   opacity: 0.5;
   pointer-events: none;
@@ -137,7 +137,7 @@ const titleScale = computed(() => {
   margin-top: 2rem;
   text-align: center;
   max-width: 42rem;
-  font-family: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   font-size: 0.8125rem;
   line-height: 1.4;
 }

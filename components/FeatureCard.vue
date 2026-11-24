@@ -30,7 +30,7 @@ withDefaults(defineProps<{
 }
 
 .feature-title {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 1.05rem;
   color: var(--snyk-text);
